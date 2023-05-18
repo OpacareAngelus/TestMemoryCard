@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_vert"
+    tools:context=".activity.mainActivityFragments.FragmentGame">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRoundCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:gravity="center"
+        android:padding="@dimen/small_padding"
+        android:text="@string/rounds_s"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_mid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivFirstCard, ivSecondCard, ivThirdCard, ivFourthCard"
+        app:flow_horizontalGap="@dimen/vertical_gap"
+        app:layout_constraintBottom_toTopOf="@+id/btnRestart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRoundCounter" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFirstCard"
+        android:layout_width="@dimen/card_with"
+        android:layout_height="@dimen/card_height"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:foreground="@drawable/frame_rounded_light_to_mid"
+        android:padding="@dimen/small_padding" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSecondCard"
+        android:layout_width="@dimen/card_with"
+        android:layout_height="@dimen/card_height"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:foreground="@drawable/frame_rounded_light_to_mid"
+        android:padding="@dimen/small_padding"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivThirdCard"
+        android:layout_width="@dimen/card_with"
+        android:layout_height="@dimen/card_height"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:foreground="@drawable/frame_rounded_light_to_mid"
+        android:padding="@dimen/small_padding"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFourthCard"
+        android:layout_width="@dimen/card_with"
+        android:layout_height="@dimen/card_height"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:foreground="@drawable/frame_rounded_light_to_mid"
+        android:padding="@dimen/small_padding"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRestart"
+        android:layout_width="@dimen/btn_with"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:text="@string/restart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_mid"
+        app:layout_constraintBottom_toTopOf="@id/btnBackToMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBackToMenu"
+        android:layout_width="@dimen/btn_with"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@drawable/frame_rounded_light_to_mid"
+        android:text="@string/back_to_menu"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_mid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

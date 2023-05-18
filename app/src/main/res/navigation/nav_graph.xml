@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMainMenu">
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="com.innogames.testmemorycard.activity.mainActivityFragments.FragmentGame"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentMainMenu"
+            app:destination="@id/fragmentMainMenu" />
+        <action
+            android:id="@+id/action_fragmentGame_self"
+            app:destination="@id/fragmentGame" />
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentEndGame"
+            app:destination="@id/fragmentEndGame" />
+        <argument
+            android:name="rounds"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="time"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMainMenu"
+        android:name="com.innogames.testmemorycard.activity.mainActivityFragments.FragmentMainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentGetJson"
+            app:destination="@id/fragmentGetJson" />
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGetJson"
+        android:name="com.innogames.testmemorycard.activity.mainActivityFragments.FragmentGetJson"
+        android:label="fragment_get_json"
+        tools:layout="@layout/fragment_get_json" />
+    <fragment
+        android:id="@+id/fragmentEndGame"
+        android:name="com.innogames.testmemorycard.activity.mainActivityFragments.FragmentEndGame"
+        android:label="fragment_end_game"
+        tools:layout="@layout/fragment_end_game" >
+        <action
+            android:id="@+id/action_fragmentEndGame_to_fragmentMainMenu"
+            app:destination="@id/fragmentMainMenu" />
+        <argument
+            android:name="rounds"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+    </fragment>
+</navigation>
